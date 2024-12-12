@@ -16,7 +16,7 @@ A script that provides basic system information and performs a basic security ch
 
 #### Usage:
 Run the script with the following command:
-```bash
+bash
 ./scripts/system_info.sh
 
 ### 2. check_file_permissions.sh
@@ -28,6 +28,5 @@ A script to find files in the system that are world-writable, which could pose a
 
 #### Usage:
 Run the script with the following command:
-```bash
+bash
 ./scripts/check_file_permissions.sh
-
