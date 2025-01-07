@@ -13,6 +13,6 @@ echo "Security Check: Users with Default Passwords"
 echo "==========================================="
 
 
-awk -F: '($2 == "" || $2 == "*") {print $1}' /etc/shadow | while read user; do
+awk -F: '($2 == "" || $2 == "*") {print $1}' /etc/shadow | while read -r user; do
     echo "Warning: $user has a default or no password set!"
 done
