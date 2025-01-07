@@ -21,3 +21,9 @@ jobs:
 
       - name: Run all scripts
         run: scripts/run_all_checks.sh
+
+      - name: Install ShellCheck
+        run: sudo apt-get update && sudo apt-get install -y shellcheck
+
+      - name: Run ShellCheck on scripts
+        run: shellcheck scripts/*.sh
