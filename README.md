@@ -54,10 +54,26 @@ A script that monitors system logs for potential issues like errors, failures, o
 
 #### Usage:
 Run the script with the following command:
-```bash
+
 ./scripts/monitor_logs.sh
 
+## Dockerized Usage
+This project has been containerized using Docker for ease of deployment and portability. Follow the steps below to build and run the container.
 
+### Build the Docker Image
+To build the Docker image, run the following command in the root directory (where the Dockerfile is located):
+sudo docker build -t linux-automation-scripts .
+
+### Run the Docker Container
+To run the container and execute scripts:
+sudo docker run linux-automation-scripts
+
+### Access the Container
+To enter the container interactively:
+sudo docker run -it linux-automation-scripts /bin/bash
+Once inside, you can manually execute the scripts like so:
+./scripts/system_info.sh
+./scripts/check_file_permissions.sh
 
 ## Continuous Integration (CI)
 This repository uses GitHub Actions to ensure high code quality and functionality:
