@@ -44,6 +44,20 @@ Run the script with the following command:
 
 ./scripts/run_all_checks.sh
 
+### 4. `monitor_logs.sh`
+A script that monitors system logs for potential issues like errors, failures, or warnings.
+
+#### Features:
+- Scans `/var/log/syslog` for specific patterns (e.g., `error`, `failed`, `critical`, `warn`).
+- Outputs the results to `/tmp/log_monitor_results.txt`.
+- Alerts the user if potential issues are found.
+
+#### Usage:
+Run the script with the following command:
+```bash
+./scripts/monitor_logs.sh
+
+
 
 ## Continuous Integration (CI)
 This repository uses GitHub Actions to ensure high code quality and functionality:
