@@ -1,18 +1,19 @@
 FROM ubuntu:22.04
 
-LABEL maintainer="szeplaki.jozsef97@gmail.com"
 
 RUN apt-get update && apt-get install -y \
     bash \
     coreutils \
+    git \
+    curl \
     grep \
     util-linux \
     && apt-get clean
 
-WORKDIR /app
+WORKDIR /scripts
 
-COPY scripts/ ./scripts
+COPY scripts/ /scripts/
 
-RUN chmod +x ./scripts/*.sh
+RUN chmod +x /scripts/*.sh
 
-CMD ["bash"]
+CMD ["bash", "/scripts/run_all_checks.sh"]

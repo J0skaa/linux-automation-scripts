@@ -1,0 +1,9 @@
+services:
+  bash_script_runner:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: linux-automation-scripts-bash_script_runner
+    volumes:
+      - ./scripts:/scripts
+    command: bash /scripts/run_all_checks.sh
